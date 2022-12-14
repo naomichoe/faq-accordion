@@ -19,7 +19,8 @@
 body {
     font-family: 'Kumbh Sans';
     font-size: 12px;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background: linear-gradient(to top, var(--soft-blue), var(--soft-violet));
     background-repeat: no-repeat;
 }
@@ -27,7 +28,8 @@ body {
 .main-container {
     background-color: var(--light-grayish-blue);
     width: 950px;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     margin: 60px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -124,7 +126,13 @@ hr {
 }
 
 
-
 /* provided from challenge */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: var(--very-dark-grayish-blue); 
+    text-decoration: none;
+}
