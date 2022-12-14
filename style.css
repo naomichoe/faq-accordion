@@ -7,7 +7,7 @@
     --soft-blue: hsl(240, 73%, 65%);
     --very-dark-grayish-blue: hsl(237, 12%, 33%);
     --dark-grayish-blue: hsl(240, 6%, 50%);
-    --light-grayish-blue: hsl(240, 5%, 91%)
+    --light-grayish-blue: hsl(240, 5%, 91%);
 }
 
 * {
@@ -21,16 +21,52 @@ body {
     font-size: 12px;
     height: 100vh;
     background: linear-gradient(to top, var(--soft-blue), var(--soft-violet));
+    background-repeat: no-repeat;
 }
 
 .main-container {
-    width: 300px;
-    margin: 20px auto;
+    background-color: var(--light-grayish-blue);
+    width: 950px;
+    height: 500px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 20px;
+    position: relative;
+}
+
+.left-panel {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: right 80px bottom -150px;
+    grid-column: 1 / 2;
+    overflow: hidden;
+}
+
+#box {
+    position: absolute;
+    left: -95px;
+    top: 200px;
+    z-index: 2;
+}
+
+#woman {
+    position: relative;
+    right: 80px;
+    bottom: -60px;
+    z-index: 1;
+}
+
+.accordion-container {
+    grid-column: 2 / 3;
+    padding: 50px 50px 50px 0;
 }
 
 .accordion {
-    background-color: rgb(124, 39, 210);
-    color: white;
+    color: var(--dark-grayish-blue);
+    font-family: inherit;
+    font-size: 0.9rem;
+    background-color: inherit;
     border: none;
     width: 100%;
     padding: 10px;
@@ -49,8 +85,13 @@ body {
     float: right;
 }
 
-.active, .accordion:hover {
-    background-color: rgb(167, 120, 210);
+.accordion:hover {
+    color: var(--soft-red);
+}
+
+button.active  {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
 }
 
 .panel {
@@ -58,8 +99,29 @@ body {
     width: 100%;
     text-align: left;
     display: none;
+    color: var(--dark-grayish-blue);
 }
 
+img.mobile {
+    display: none;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: var(--very-dark-desaturated-blue);
+}
+
+hr {
+    background-color: hsl(0, 1%, 81%);
+    height: 1px;
+    border: none;
+    width: 97%;
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 
 
