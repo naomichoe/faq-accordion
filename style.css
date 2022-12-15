@@ -26,7 +26,7 @@ body {
 }
 
 .main-container {
-    background-color: var(--light-grayish-blue);
+    background-color: white;
     width: 950px;
     min-height: 500px;
     height: auto;
