@@ -30,7 +30,7 @@ body {
     width: 950px;
     min-height: 500px;
     height: auto;
-    margin: 60px auto;
+    margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-radius: 20px;
@@ -133,7 +133,7 @@ hr {
 }
 
 .attribution a { 
-    color: var(--very-dark-grayish-blue); 
+    color: rgb(40, 38, 38); 
     text-decoration: none;
 }
 
